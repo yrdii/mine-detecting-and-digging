@@ -46,12 +46,10 @@ def rover_path_draw(rover, n_map, map_width, map_height):
                 m_map[y_pos][x_pos] = '*'
 
             if move == 'L':
-                cur_dir += 3
-                cur_dir %= 4
+                cur_dir = (cur_dir + 3) % 4
 
             if move == 'R':
-                cur_dir += 1
-                cur_dir %= 4
+                cur_dir = (cur_dir + 1) % 4
 
             if move == 'D':
                 if n_map[y_pos][x_pos] == '1':
